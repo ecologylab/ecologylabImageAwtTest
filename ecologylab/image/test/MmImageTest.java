@@ -113,7 +113,8 @@ public class MmImageTest extends NewMmTest
 							int x	= insets.left;
 							for (BufferedImage bImage: bImageCollection)
 							{
-								g2.drawImage(bImage, x, insets.top, null);
+								int y	= insets.top + (getBounds().height - (bImage.getHeight() + insets.top + insets.bottom)) / 2;
+								g2.drawImage(bImage, x, y, null);
 								x		+= bImage.getWidth() + SPACING;
 							}
 						}
@@ -130,7 +131,9 @@ public class MmImageTest extends NewMmTest
 			if (index == 0)
 				setJFrameSize(width, height);
 			else
-				incrementJFrameSize(width+SPACING, 0);
+			{
+				incrementJFrameSizeXEnsureY(width+SPACING, height);
+			}
 		}
 		result.repaint();
 		return result;
@@ -157,11 +160,13 @@ public class MmImageTest extends NewMmTest
 		jFrame.setSize(width, height);
 	}
 
-	private synchronized void incrementJFrameSize(final int deltaWidth, final int deltaHeight)
+	private synchronized void incrementJFrameSizeXEnsureY(final int deltaWidth, final int requiredHeight)
 	{
 		Rectangle bounds	= jFrame.getBounds();
 		int width = bounds.width + deltaWidth;
-		int height = bounds.height + deltaHeight;
+		int borderHeight	= insets.top + insets.bottom;
+		int deltaHeight	= requiredHeight + borderHeight - bounds.height;
+		int height = deltaHeight > 0 ? deltaHeight + bounds.height : bounds.height;
 		System.out.println("incrementJFrameSize(" + width+","+height);
 		jFrame.setSize(width, height);
 	}
