@@ -75,8 +75,7 @@ public class MmImageTest extends NewMmTest
 				jFrame(bufferedImage.getWidth(), bufferedImage.getHeight(), index);
 			}
 		}
-		else
-			super.output(incomingClosure);
+		super.output(incomingClosure);
 	}	
 	
 	JFrame jFrame;
