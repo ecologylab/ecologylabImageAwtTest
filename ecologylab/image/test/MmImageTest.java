@@ -20,6 +20,7 @@ import ecologylab.semantics.metadata.builtins.Document;
 import ecologylab.semantics.metadata.builtins.DocumentClosure;
 import ecologylab.semantics.metadata.builtins.Image;
 import ecologylab.semantics.metametadata.test.NewMmTest;
+import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.TranslationScope.GRAPH_SWITCH;
 
@@ -38,12 +39,17 @@ public class MmImageTest extends NewMmTest
 	public static int SPACING				= 3;
 	
 
+	public MmImageTest(String[] args, boolean outputOneAtATime) throws SIMPLTranslationException
+	{
+		this("MmImageTest", args, outputOneAtATime);
+	}
 	/**
 	 * @param outputStream
+	 * @throws SIMPLTranslationException 
 	 */
-	public MmImageTest(String[] args, boolean outputOneAtATime)
+	public MmImageTest(String appName, String[] args, boolean outputOneAtATime) throws SIMPLTranslationException
 	{
-		super(System.out);
+		super(appName, System.out);
 		
 		this.args	= args;
 		this.outputOneAtATime	= outputOneAtATime;
@@ -173,7 +179,15 @@ public class MmImageTest extends NewMmTest
 	public static void main(String[] args)
 	{
 		TranslationScope.graphSwitch	= GRAPH_SWITCH.ON;
-		MmImageTest mmTest			= new MmImageTest(args, true);
+		try
+		{
+			MmImageTest mmTest			= new MmImageTest(args, true);
+		}
+		catch (SIMPLTranslationException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //		mmTest.collect(args);
 	}
 }
