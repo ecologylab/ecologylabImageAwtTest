@@ -46,7 +46,7 @@ public class MmImageTest2 extends NewMmTest
 	 */
 	public MmImageTest2(String[] args, boolean outputOneAtATime) throws SIMPLTranslationException
 	{
-		super(System.out);
+		super("MmImageTest2");
 		
 		this.args	= args;
 		this.outputOneAtATime	= outputOneAtATime;
