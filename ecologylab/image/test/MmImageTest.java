@@ -38,6 +38,11 @@ public class MmImageTest extends NewMmTest
 	
 	public static int SPACING				= 3;
 	
+	static
+	{
+		ImageParserAwt.init();
+	}
+
 
 	public MmImageTest(String[] args, boolean outputOneAtATime) throws SIMPLTranslationException
 	{
@@ -53,8 +58,6 @@ public class MmImageTest extends NewMmTest
 		
 		this.args	= args;
 		this.outputOneAtATime	= outputOneAtATime;
-		
-		ImageParserAwt.init();
 		
 		jFrame(IMAGE_WIDTH, IMAGE_HEIGHT, 0);	// get the first repaint -> paint happening.
 	}

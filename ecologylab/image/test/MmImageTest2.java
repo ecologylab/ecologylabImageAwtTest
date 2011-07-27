@@ -39,6 +39,11 @@ public class MmImageTest2 extends NewMmTest
 	
 	public static int SPACING				= 3;
 	
+	static
+	{
+		ImageParserAwt.init();
+	}
+
 
 	/**
 	 * @param outputStream
@@ -50,8 +55,6 @@ public class MmImageTest2 extends NewMmTest
 		
 		this.args	= args;
 		this.outputOneAtATime	= outputOneAtATime;
-		
-		ImageParserAwt.init();
 		
 		jFrame(IMAGE_WIDTH, IMAGE_HEIGHT, 0);	// get the first repaint -> paint happening.
 	}
