@@ -8,6 +8,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/ecologylabSemanticsExample"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/jtidy"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/multivalent"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ecologylabImage"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ecologylabImageAwt"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
