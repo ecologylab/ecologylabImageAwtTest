@@ -6,10 +6,6 @@
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
-<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
-<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
-</listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ecologylab.image.test.MmImageTest"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="http://graphics8.nytimes.com/images/2011/06/21/science/21BRAI_SPAN/21BRAI_SPAN-sfSpan-v2.jpg&#13;&#10;http://graphics8.nytimes.com/images/2011/06/20/science/20saw_hyenas/20saw_hyenas-thumbStandard.jpg"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ecologylabImageAwtTest"/>
