@@ -21,8 +21,8 @@ import ecologylab.semantics.metadata.builtins.DocumentClosure;
 import ecologylab.semantics.metadata.builtins.Image;
 import ecologylab.semantics.metametadata.test.NewMmTest;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.TranslationScope.GRAPH_SWITCH;
+import ecologylab.serialization.SimplTypesScope;
+import ecologylab.serialization.SimplTypesScope.GRAPH_SWITCH;
 
 /**
  * Test program for using semantics to extract metadata for images, and then downloadParse and display them in a JFrame.
@@ -181,7 +181,7 @@ public class MmImageTest extends NewMmTest
 
 	public static void main(String[] args)
 	{
-		TranslationScope.graphSwitch	= GRAPH_SWITCH.ON;
+		SimplTypesScope.graphSwitch	= GRAPH_SWITCH.ON;
 		try
 		{
 			MmImageTest mmTest			= new MmImageTest(args, true);

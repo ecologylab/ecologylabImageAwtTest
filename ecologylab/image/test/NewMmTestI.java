@@ -8,8 +8,8 @@ import java.io.OutputStream;
 import ecologylab.semantics.documentparsers.ImageParserAwt;
 import ecologylab.semantics.metametadata.test.NewMmTest;
 import ecologylab.serialization.SIMPLTranslationException;
-import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.TranslationScope.GRAPH_SWITCH;
+import ecologylab.serialization.SimplTypesScope;
+import ecologylab.serialization.SimplTypesScope.GRAPH_SWITCH;
 
 /**
  * @author andruid
@@ -19,7 +19,7 @@ public class NewMmTestI extends NewMmTest
 {
 	static
 	{
-		TranslationScope.graphSwitch	= GRAPH_SWITCH.ON;
+		SimplTypesScope.graphSwitch	= GRAPH_SWITCH.ON;
 		ImageParserAwt.init();
 	}
 
@@ -47,13 +47,13 @@ public class NewMmTestI extends NewMmTest
 	/**
 	 * @param appName
 	 * @param outputStream
-	 * @param metadataTranslationScope
+	 * @param metadataSimplTypesScope
 	 * @throws SIMPLTranslationException
 	 */
 	public NewMmTestI(String appName, OutputStream outputStream,
-			TranslationScope metadataTranslationScope) throws SIMPLTranslationException
+			SimplTypesScope metadataSimplTypesScope) throws SIMPLTranslationException
 	{
-		super(appName, outputStream, metadataTranslationScope);
+		super(appName, outputStream, metadataSimplTypesScope);
 		// TODO Auto-generated constructor stub
 	}
 	
