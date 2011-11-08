@@ -53,7 +53,7 @@ public class NewMmTestI extends NewMmTest
 	public NewMmTestI(String appName, OutputStream outputStream,
 			SimplTypesScope metadataSimplTypesScope) throws SIMPLTranslationException
 	{
-		super(null, appName, outputStream, metadataSimplTypesScope);
+		super(appName, outputStream, metadataSimplTypesScope);
 		// TODO Auto-generated constructor stub
 	}
 	
